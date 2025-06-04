@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products - Sri Hyma Agencies</title>
+</head>
+<body>
+  <h1>Our Products</h1>
+  <ul>
+    <li>Exide Inverter Battery – ₹6,000</li>
+    <li>Amaron Car Battery – ₹5,500</li>
+    <li>Luminous Tall Tubular – ₹7,200</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sri Hyma Agencies - Battery Sales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sri Hyma Agencies</h1>
+    <p>Reliable Power, Trusted Service</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="products.html">Products</a> |
+      <a href="billing.html">Billing</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome to Sri Hyma Agencies</h2>
+    <p>We supply a wide range of high-quality batteries for cars, inverters, and industrial use.</p>
+  </main>
+</body>
+</html>

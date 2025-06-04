@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Billing - Sri Hyma Agencies</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Generate Invoice</h1>
+  <form id="invoiceForm">
+    Customer Name: <input type="text" id="customer" required><br><br>
+    Product: 
+    <select id="product">
+      <option>Exide Battery - ₹6000</option>
+      <option>Amaron Battery - ₹5500</option>
+      <option>Luminous Battery - ₹7200</option>
+    </select><br><br>
+    Quantity: <input type="number" id="quantity" min="1" value="1"><br><br>
+    <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+  </form>
+
+  <script>
+    async function generateInvoice() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const name = document.getElementById("customer").value;
+      const product = document.getElementById("product").value;
+      const quantity = document.getElementById("quantity").value;
+      const price = parseInt(product.split('₹')[1]);
+      const total = price * quantity;
+
+      doc.text(`Sri Hyma Agencies - Invoice`, 20, 20);
+      doc.text(`Customer Name: ${name}`, 20, 40);
+      doc.text(`Product: ${product}`, 20, 50);
+      doc.text(`Quantity: ${quantity}`, 20, 60);
+      doc.text(`Total: ₹${total}`, 20, 70);
+      doc.save(`${name}-invoice.pdf`);
+    }
+  </script>
+</body>
+</html>
